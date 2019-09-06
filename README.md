@@ -1,6 +1,6 @@
-# DTS-2019-Smart-Bathroom
-Final Project Digitalent Scholarship 2019 about smart bathroom
+# Final Project Digitalent Scholarship 2019 about smart bathroom
 
 Smart Bathroom is IoT for helping user for monitoring, controling environment in bathroom using two microcontroller ESP32. For monitoring i measure temperature using LM35 and water discarge using ultrasonic sensor.then can control two tap water, for bathtub and shower. tap water can control using IoT Platfrom Blynk and shower using ultrasonic, just standing in front of the sensor with a predetermined distance. i use stepper motor for open tap water. there should be using another actuator but i just have stepper so it can replace with better actuator. communication that i used from ESP32 to blynk for storing data temperature and debit is WiFi module and protocol MQTT
 and Node-Red for gateway, here is the rule chain : 
 ![Node red](https://user-images.githubusercontent.com/17356265/64408311-9d191900-d0b0-11e9-9ee2-22eaed0eba40.PNG)
+i create two topic to distinguish between temperature and water discharge. each topic connect to each database(MongoDB) and Blynk Widget. To link topic to Blynk Widget i used function that adding payload from topic to Widget Tabel. because the widget is limited in node-red so I use a table widget. Why i connect ESP32 to Blynk using MQTT because ESP32 cant connect to MQTT and Blynk at the same time, i used MQTT for storing data so i used MQTT too for bridge between ESP32 and Blynk. Here is Display in Blynk : 
