@@ -4,3 +4,4 @@ Smart Bathroom is IoT for helping user for monitoring, controling environment in
 and Node-Red for gateway, here is the rule chain : 
 ![Node red](https://user-images.githubusercontent.com/17356265/64408311-9d191900-d0b0-11e9-9ee2-22eaed0eba40.PNG)
 i create two topic to distinguish between temperature and water discharge. each topic connect to each database(MongoDB) and Blynk Widget. To link topic to Blynk Widget i used function that adding payload from topic to Widget Tabel. because the widget is limited in node-red so I use a table widget. Why i connect ESP32 to Blynk using MQTT because ESP32 cant connect to MQTT and Blynk at the same time, i used MQTT for storing data so i used MQTT too for bridge between ESP32 and Blynk. Here is Display in Blynk : 
+![WhatsApp Image 2019-09-06 at 2 43 02 PM](https://user-images.githubusercontent.com/17356265/64410562-80331480-d0b5-11e9-96e0-01ea12f30e60.jpeg)
